@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOODHub.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">NOODHub.</div>
+        
+        <div class="search-container" id="searchContainer">
+            <button class="close-search-btn" id="closeSearchBtn">✕</button>
+            <input type="search" id="searchInput" placeholder="Search by titles or tags...">
+        </div>
+
+        <div class="header-actions">
+            <button id="mobileSearchBtn" class="icon-btn mobile-search-btn">🔍</button>
+            <button id="themeToggle" class="icon-btn">☀️</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <video class="hero-bg-video" id="heroBgVideo" autoplay loop muted playsinline>
+                <source id="heroVideoSource" src="" type="video/mp4">
+            </video>
+            
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1 class="hero-title" id="heroTitle">Loading...</h1>
+                <p class="hero-desc" id="heroDesc">Latest Release • Check it out now!</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-play" id="heroPlayBtn">▶ Play Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories" id="categoryContainer">
+            <div class="pill active" data-filter="all">All</div>
+        </section>
+
+        <h2 class="section-title">For You</h2>
+        
+        <section class="grid-container" id="videoGrid">
+            <div class="loader-msg">Fetching latest videos...</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo logo">NOODHub.</div>
+        <div class="footer-text">© 2024 NOODHub. • Made with ❤️ for Chetan Bhati</div>
+    </footer>
+    
+    <div class="modal-overlay" id="videoModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <video id="mainPlayer" controls playsinline>
+                <source id="videoSource" src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+</body>
+</html>
