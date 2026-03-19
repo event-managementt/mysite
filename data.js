@@ -15,7 +15,7 @@ const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbxrZEpSFXMFXZSDPE
                     generateCategoryPills(allVideos); 
                     renderVideos(allVideos); 
                 } else {
-                    grid.innerHTML = '<div class="loader-msg">No videos found.</div>';
+                    grid.innerHTML = '<div class="loader-msg">Loading...</div>';
                 }
             } catch (error) {
                 grid.innerHTML = '<div class="loader-msg">Failed to connect to database.</div>';
@@ -69,7 +69,7 @@ const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbxrZEpSFXMFXZSDPE
             const grid = document.getElementById('videoGrid');
             grid.innerHTML = '';
             if (videosToRender.length === 0) {
-                grid.innerHTML = '<div class="loader-msg">No matching videos found.</div>';
+                grid.innerHTML = '<div class="loader-msg">Loading...</div>';
                 return;
             }
             videosToRender.forEach(video => {
